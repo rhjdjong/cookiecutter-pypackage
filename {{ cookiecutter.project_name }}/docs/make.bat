@@ -1,3 +1,4 @@
+{% raw %}
 @ECHO OFF
 
 pushd %~dp0
@@ -33,3 +34,4 @@ goto end
 
 :end
 popd
+{% endraw %}

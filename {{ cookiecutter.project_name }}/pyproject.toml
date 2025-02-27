@@ -27,7 +27,7 @@ dependencies = []
 path = "VERSION"
 
 [tool.hatch.build.targets]
-packages = ["src/sliplib"]
+packages = ["src/{{ cookiecutter.__package_name }}"]
 
 [tool.hatch.envs.default]
 python = "3.12"
@@ -92,7 +92,7 @@ fix = [
 ]
 
 [tool.coverage.run]
-source_pkgs = ["sliplib", "tests"]
+source_pkgs = ["{{ cookiecutter.__project_slug }}", "tests"]
 branch = true
 parallel = true
 concurrency = [
@@ -101,7 +101,7 @@ concurrency = [
 ]
 
 [tool.coverage.paths]
-sliplib = ["src/sliplib"]
+sliplib = ["src/{{ cookiecutter.__package_name }}"]
 tests = ["tests"]
 
 [tool.coverage.report]

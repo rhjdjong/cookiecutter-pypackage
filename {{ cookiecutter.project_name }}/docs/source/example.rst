@@ -6,5 +6,5 @@ Examples
 ========
 
 The directory :file:`examples` in
-`{{ cookiecutter.project_name }}'s GitHub repository <https://github.com/rhjdjong/SlipLib/>`_
-contains some basic examples on how the :mod:`{{ cookiecutter.project_slug }}` module can be used.
+`{{ cookiecutter.project_name }}`'s GitHub repository <https://github.com/{{ cookiecutter.__gh_slug }}/>_
+contains some basic examples on how the :mod:`{{ cookiecutter.__package_name }}` package can be used.

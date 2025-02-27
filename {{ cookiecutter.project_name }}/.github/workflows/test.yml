@@ -91,7 +91,7 @@ jobs:
         with:
           auth: {% raw -}${{ secrets.GIST_SECRET }}{% endraw %}
           gistID: 12a0c0616d67fc2b8b9cda9eda30be5d
-          filename: {% raw -%}{{ cookiecutter.project_slug }}{% endraw %}_coverage.svg
+          filename: {% raw -%}{{ cookiecutter.__project_slug }}_coverage.svg{% endraw %}
           label: Coverage
           message: {% raw -%}${{ env.total }}{% endraw %} %
           minColorRange: 50

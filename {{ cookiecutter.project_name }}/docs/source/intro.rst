@@ -1,4 +1,4 @@
 Introduction
 ============
 
-.. automodule:: {{ cookiecutter.project_slug }}
+.. automodule:: {{ cookiecutter.__package_name }}
