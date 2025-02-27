@@ -156,7 +156,7 @@ jobs:
       - name: Create GitHub Release
         id: create_release
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: {% raw -%}${{ github.token }}{% endraw %}
         run: |
           tag_name={% raw -%}${{ needs.github_tag.outputs.tag_name }}{% endraw %}
           gh release create ${tag_name} dist/* --title "Release ${tag_name}" --notes-file CHANGELOG.md
