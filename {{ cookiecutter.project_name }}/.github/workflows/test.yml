@@ -89,7 +89,7 @@ jobs:
       - name: Make badge
         uses: schneegans/dynamic-badges-action@v1.7.0
         with:
-          auth: {% raw -}${{ secrets.GIST_SECRET }}{% endraw %}
+          auth: {% raw -%}${{ secrets.GIST_SECRET }}{% endraw %}
           gistID: 12a0c0616d67fc2b8b9cda9eda30be5d
           filename: {% raw -%}{{ cookiecutter.__project_slug }}_coverage.svg{% endraw %}
           label: Coverage
