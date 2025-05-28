@@ -9,7 +9,7 @@ description = "{{ cookiecutter.project_short_description }}"
 readme = "README.md"
 license = "MIT"
 authors = [
-    { name = "{{ cookiecutter.full_name }}", email = "{{ cookiecutter.email }}" },
+    { name = "{{ cookiecutter._full_name }}", email = "{{ cookiecutter._email }}" },
 ]
 keywords = [
 
@@ -58,12 +58,16 @@ cov = [
     "test-cov",
     "cov-report",
 ]
+cov-xml = [
+    "test-cov",
+    "coverage combine",
+    "coverage xml",
+]
 
 [[tool.hatch.envs.types.matrix]]
-python_version = ["3.8", "3.9", "3.10", "3.11", "3.12", "3.13"]
+python = ["3.8", "3.9", "3.10", "3.11", "3.12", "3.13"]
 
 [tool.hatch.envs.types]
-python = "3.13"
 extra-dependencies = [
     "mypy>=1.0.0",
 ]
@@ -101,7 +105,7 @@ concurrency = [
 ]
 
 [tool.coverage.paths]
-sliplib = ["src/{{ cookiecutter.__package_name }}"]
+{{ cookiecutter.__package_name }} = ["src/{{ cookiecutter.__package_name }}"]
 tests = ["tests"]
 
 [tool.coverage.report]
