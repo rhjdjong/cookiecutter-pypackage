@@ -11,9 +11,9 @@ import sys
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "{{ cookiecutter.project_name }}"
-copyright = "{% now 'utc', '%Y' %} {{ cookiecutter.full_name }}"  # noqa: A001
-author = "{{ cookiecutter.full_name }}"
-github_username = "{{ cookiecutter.github_username }}"
+copyright = "{% now 'utc', '%Y' %} {{ cookiecutter._full_name }}"  # noqa: A001
+author = "{{ cookiecutter._full_name }}"
+github_username = "{{ cookiecutter._github_username }}"
 github_repository = "https://github.com/{{ cookiecutter.__gh_slug }}/"
 
 # -- General configuration ---------------------------------------------------
